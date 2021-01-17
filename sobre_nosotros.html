@@ -1,0 +1,370 @@
+<?php
+session_start();
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Tienda</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+        <header class="header header--standard header--market-place-4" data-sticky="true">
+            <div class="header__content">
+                <div class="container">
+                    <div class="header__content-left">
+                        <!--=====================================
+                                            Logo
+                            ======================================-->
+                        <a class="ps-logo" href="index.html">
+                            <img src="img/template/logo.png" alt="">
+                        </a>
+                        <!--=====================================
+                                            Menú
+                            ======================================-->
+                        <div class="menu--product-categories">
+                            <div class="menu__toggle">
+                                <i class="icon-menu"></i>
+                                <span> Menú</span>
+                            </div>
+                            <div class="menu__content">
+                                <ul class="menu--dropdown">
+                                    <li>
+                                        <a href="index.html"><i class="icon-home2"></i> Inicio</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogo.html"><i class="icon-loyalty"></i> Catálogo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-person"></i> Sobre nosotros</a>
+                                    </li>
+                                    <li>
+                                        <a href="contacto.html"><i class="icon-comments"></i> Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End menu-->
+                    </div>
+                    <!-- End Header Content Left-->
+                    <!--=====================================
+                                        Search
+                        ======================================-->
+                    <div class="header__content-center">
+                        <form class="ps-form--quick-search" action="catalogo.php" method="get">
+                            <input class="form-control" type="text" placeholder="Busca tu brownie favorito">
+                            <button>Buscar</button>
+                        </form>
+                    </div>
+                    <div class="header__content-right">
+                        <div class="header__actions">
+                            <!--=====================================
+                                                Cart
+                                ======================================-->
+                            <div class="ps-cart--mini">
+                                <a class="header__extra" href="caja.html">
+                                    <i class="icon-shopping-cart"></i>
+                                </a>
+                            </div>
+                            <!--=====================================
+                                            Login and Register
+                                ======================================-->
+                            <div class="ps-block--user-header">
+                                <div class="ps-block__left">
+                                    <div class="menu--product-categories">
+                                        <div class="menu__toggle left">
+                                            <i class="icon-user"></i>
+                                            <span> Menú</span>
+                                        </div>
+                                        <div class="menu__content">
+                                            <ul class="menu--dropdown ">
+                                                <li>
+                                                    <a href="#"><i class="icon-home2 "></i>Mi perfil</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="icon-list-alt"></i>Negocio</a>
+                                                </li>
+                                                <li onclick="closeSession()">
+                                                    <a href="#"><i class="icon-close"></i> cerrar sesión</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ps-block__right">
+
+                                        <a href="#">
+                                                Usuario</a>
+                                    </div>
+                                    <!-- End menu-->
+                                    <!--<a href="login.php#sing-in">Iniciar sesión o
+                                      <a href="login.php#sing-in">Registrarse</a>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Header Actions-->
+                    </div>
+                    <!-- End Header Content Right-->
+                </div>
+                <!-- End Container-->
+            </div>
+            <!-- End Header Content-->
+        </header>
+
+        <header class="header header--mobile" data-sticky="true">
+            <div class="navigation--mobile">
+                <div class="navigation__left">
+                    <!--=====================================
+                                Menu Mobile
+                    ======================================-->
+                    <div class="menu--product-categories">
+
+                        <div class="ps-shop__filter-mb mt-4" id="filter-sidebar">
+                            <i class="icon-menu "></i>
+                        </div>
+
+                        <div class="ps-filter--sidebar">
+
+                            <div class="ps-filter__header">
+                                <h3>Menú</h3>
+                                <a class="ps-btn--close ps-btn--no-boder" href="#"></a>
+                            </div>
+
+                            <div class="ps-filter__content">
+
+                                <aside class="widget widget_shop">
+                                    <ul class="ps-list--categories">
+                                        <li class="current-menu-item "><a href="index.html">Inicio</a>
+                                        </li>
+                                        <li class="current-menu-item "><a href="#">Catálogo</a>
+                                        </li>
+                                        <li class="current-menu-item "><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                                        <li class="current-menu-item "><a href="#">Carrito de compras</a></li>
+                                        <li class="current-menu-item "><a href="contacto.html">Contacto</a></li>
+
+                                        <li class="current-menu-item ">
+                                            <a href="#">Negocios</a>
+                                        </li>
+                                        <li onclick="" class="current-menu-item ">
+                                            <a href="contacto.hmtl">Cerrar cesión</a></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End menu-->
+
+                </div>
+
+                <div class="navigation__center">
+
+                    <a class="ps-logo" href="index.html">
+                        <img src="img/template/logo.png" class="pt-3" alt="">
+                    </a>
+                </div>
+
+                <div class="navigation__right">
+
+                    <div class="header__actions">
+                        <!--=====================================
+                                    Login and Register
+                        ======================================-->
+
+                        <div class="ps-block--user-header">
+
+                            <div class="ps-block__left">
+                                <i class="icon-user"></i>
+                            </div>
+                            <div class="ps-block__right">
+                                <a href="#">Usuario</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style 2.css">
+
+        <!--=====================================
+                            CSS
+            ======================================-->
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="css/plugins/fontawesome.min.css">
+        <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- Slick -->
+        <link rel="stylesheet" href="css/plugins/slick.css">
+        <!-- Light Gallery -->
+        <link rel="stylesheet" href="css/plugins/lightgallery.min.css">
+        <!-- Font Awesome Start -->
+        <link rel="stylesheet" href="css/plugins/fontawesome-stars.css">
+
+        <!-- Select 2 -->
+        <link rel="stylesheet" href="css/plugins/select2.min.css">
+
+        <!-- estilo principal -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style 2.css">
+        <!-- Market Place 4 -->
+        <link rel="stylesheet" href="css/market-place-4.css">
+
+
+        <div class="site-wrap">
+
+            <div class="site-section border-bottom" data-aos="fade">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <div class="block-16">
+                                <br>
+                                <br>
+                                <figure>
+                                    <img src="img/personas/blog.jpg" alt="Image placeholder">
+
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+
+
+                            <div class="site-section-heading pt-3 mb-4">
+                                <h2 class="text-black">Como iniciamos</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repellat, dicta at laboriosam, nemo exercitationem itaque eveniet architecto cumque, deleniti commodi molestias repellendus quos sequi hic fugiat asperiores illum.
+                                Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.</p>
+                            <p>Accusantium dolor ratione maiores est deleniti nihil? Dignissimos est, sunt nulla illum autem in, quibusdam cumque recusandae, laudantium minima repellendus.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-section border-bottom" data-aos="fade">
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-7 site-section-heading text-center pt-4">
+                            <h2>The Team</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+
+                            <div class="block-38 text-center">
+                                <div class="block-38-img">
+                                    <div class="block-38-header">
+                                        <img src="img/personas/persona4.jpg" alt="Image placeholder" class="mb-4">
+                                        <h3 class="block-38-heading h4">Elizabeth Graham</h3>
+                                        <p class="block-38-subheading">CEO/Co-Fundadora</p>
+                                    </div>
+                                    <div class="block-38-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="block-38 text-center">
+                                <div class="block-38-img">
+                                    <div class="block-38-header">
+                                        <img src="img/personas/persona2.jpg" alt="Image placeholder" class="mb-4">
+                                        <h3 class="block-38-heading h4">Andres Greive</h3>
+                                        <p class="block-38-subheading">Co-Fundador</p>
+                                    </div>
+                                    <div class="block-38-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="block-38 text-center">
+                                <div class="block-38-img">
+                                    <div class="block-38-header">
+                                        <img src="img/personas/persona3.jpg" alt="Image placeholder" class="mb-4">
+                                        <h3 class="block-38-heading h4">Patricia Marx</h3>
+                                        <p class="block-38-subheading">Marketing</p>
+                                    </div>
+                                    <div class="block-38-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="block-38 text-center">
+                                <div class="block-38-img">
+                                    <div class="block-38-header">
+                                        <img src="img/personas/persona1.jpg" alt="Image placeholder" class="mb-4">
+                                        <h3 class="block-38-heading h4">Mike Coolbert</h3>
+                                        <p class="block-38-subheading">Gerente de ventas</p>
+                                    </div>
+                                    <div class="block-38-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ps-site-features">
+
+                <div class="container">
+
+                    <div class="ps-block--site-features ps-block--site-features-2">
+
+                        <div class="ps-block__item">
+                            <div class="ps-block__left"><i class="icon-rocket"></i></div>
+                            <div class="ps-block__right">
+                                <h4>Envio Gratis</h4>
+                                <p>Todo compra apatir de 30</p>
+                            </div>
+                        </div>
+
+                        <div class="ps-block__item">
+                            <div class="ps-block__left"><i class="icon-sync"></i></div>
+                            <div class="ps-block__right">
+                                <h4>24 horas de retorno</h4>
+                                <p>Si tienes algún problema</p>
+                            </div>
+                        </div>
+
+                        <div class="ps-block__item">
+                            <div class="ps-block__left"><i class="icon-credit-card"></i></div>
+                            <div class="ps-block__right">
+                                <h4>Pago seguro</h4>
+                                <p>Pago 100% seguro</p>
+                            </div>
+                        </div>
+
+                        <div class="ps-block__item">
+                            <div class="ps-block__left"><i class="icon-bubbles"></i></div>
+                            <div class="ps-block__right">
+                                <h4>Soporte 24/7</h4>
+                                <p>Soporte dedicado</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <?php include("base/footer.php"); ?>
+        </div>
+
+
+    </body>
+
+    </html>
